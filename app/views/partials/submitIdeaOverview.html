@@ -1,0 +1,32 @@
+<div layout="column" class="md-inline-form">
+	<md-content layout-padding>
+
+		<md-input-container class="md-block">
+			<label>Business/Project Name</label>
+			<input ng-model="submitIdeaForm.data.projectName">
+		</md-input-container>
+
+		<md-input-container class="md-block">
+			<label>Industry</label>
+			<input ng-model="submitIdeaForm.data.industry">
+		</md-input-container>
+
+		<md-input-container class="md-block">
+			<label>Location</label>
+			<input ng-model="submitIdeaForm.data.location">
+		</md-input-container>
+
+		<md-input-container class="md-block">
+			<label>Stage</label>
+			<input ng-model="submitIdeaForm.data.stage">
+		</md-input-container>
+
+		<md-input-container class="md-block">
+			<label>High-level Summary</label>
+			<textarea ng-model="submitIdeaForm.data.summary" md-maxlength="500" rows="5"></textarea>
+		</md-input-container>
+
+		<md-datepicker style="margin: -20px;" ng-model="submitIdeaForm.data.startDate"
+									 md-placeholder="Start Date"></md-datepicker>
+	</md-content>
+</div>

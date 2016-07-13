@@ -1,0 +1,11 @@
+<md-toolbar class="md-whiteframe-glow-z1 site-content-toolbar md-menu-toolbar">
+	<div class="md-toolbar-tools docs-toolbar-tools" tabIndex="-1">
+		<md-button class="md-icon-button" ng-click="root.toggleLeft()" hide-gt-sm aria-label="Toggle Menu">
+			<md-icon md-svg-src="images/icons/menu.svg"></md-icon>
+		</md-button>
+		<div layout="row" flex class="fill-height">
+			<h1 class="md-toolbar-item md-headline">{{root.titleService.title}}</h1>
+			<span flex></span> <!-- use up the empty space -->
+		</div>
+	</div>
+</md-toolbar>

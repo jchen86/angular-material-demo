@@ -1,0 +1,36 @@
+<div layout="column" ng-cloak>
+
+  <div layout="row" class="md-button-group">
+    <md-button class="md-raised" flex-grow="auto" ng-href="/#/projects">
+      <md-icon md-svg-icon="images/icons/back-arrow.svg"></md-icon>
+      <span style="padding-left:5px;" hide-xs>Back</span>
+    </md-button>
+    <md-button class="md-raised" flex-grow="auto" ng-click="projectDetails.showTopPick($event)">
+      <md-icon md-svg-icon="images/icons/favorite.svg"></md-icon>
+      <span style="padding-left:5px;" hide-xs>Top-pick</span>
+    </md-button>
+    <md-button class="md-raised" flex-grow="auto" ng-click="projectDetails.showInterested($event)">
+      <md-icon md-svg-icon="images/icons/comment.svg"></md-icon>
+      <span style="padding-left:5px;" hide-xs>Interested</span>
+    </md-button>
+  </div>
+
+	<div class="md-whiteframe-4dp" layout="row" layout-xs="column" style="margin-bottom: 10px">
+		<div hide-xs class="md-padding">
+			<img ng-src="{{projectDetails.project.image}}" style="max-width:100%; height:auto;">
+		</div>
+		<div layout="column" class="md-padding">
+			<h4>{{projectDetails.project.projectName}}</h4>
+			<p>{{projectDetails.project.summary}}</p>
+		</div>
+	</div>
+
+	<md-tabs md-border-bottom md-dynamic-height>
+		<md-tab ng-repeat="tab in projectDetails.tabs" label="{{tab.title}}">
+			<md-content class="md-padding">
+				<div ng-include="tab.template"></div>
+			</md-content>
+		</md-tab>
+	</md-tabs>
+
+</div>

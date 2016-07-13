@@ -1,0 +1,17 @@
+<div ng-cloak>
+	<md-content>
+		<md-tabs md-dynamic-height md-border-bottom>
+			<md-tab ng-repeat="tab in submitIdeaForm.tabs"
+							label="{{tab.title}}">
+				<md-content class="md-padding">
+					<div ng-include="tab.template"></div>
+				</md-content>
+			</md-tab>
+		</md-tabs>
+	</md-content>
+
+	<div layout="row" layout-align="center">
+		<md-button class="md-raised" ng-click="submitIdeaForm.backToMain($event)">Back</md-button>
+		<md-button class="md-raised md-primary" ng-click="submitIdeaForm.submitForm($event)">Submit</md-button>
+	</div>
+</div>

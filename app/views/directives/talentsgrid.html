@@ -1,0 +1,40 @@
+<div class="md-padding" layout="row" layout-wrap ng-cloak>
+	<md-card ng-repeat="talent in talents | limitTo: limit" class="card-talent">
+		<md-card-title flex="none">
+			<md-card-title-text>
+				<span class="md-headline">{{talent.name}}</span>
+			</md-card-title-text>
+		</md-card-title>
+		<md-card-content flex>
+			<div class="md-padding">
+				<img ng-src="{{talent.image}}" class="md-card-image" style="width:180px; height:auto;" hide-xs>
+			</div>
+			<p class="md-subhead">
+				{{talent.summary}}
+			</p>
+			<div layout="column" ng-if="showDetails">
+				<span>
+					<md-icon md-svg-icon="images/icons/location.svg"></md-icon> {{talent.location}}
+				</span>
+				<span>
+					<md-icon md-svg-icon="images/icons/people.svg"></md-icon> {{talent.industry}}
+				</span>
+			</div>
+		</md-card-content>
+		<md-card-actions layout="row" layout-align="end center">
+			<md-button class="md-icon-button" aria-label="Favorite">
+				<md-icon md-svg-icon="images/icons/favorite.svg"></md-icon>
+				<md-tooltip md-direction="bottom">
+					Add to favourite
+				</md-tooltip>
+			</md-button>
+			<md-button class="md-icon-button" aria-label="Share">
+				<md-icon md-svg-icon="images/icons/share-arrow.svg"></md-icon>
+				<md-tooltip md-direction="bottom">
+					Share
+				</md-tooltip>
+			</md-button>
+			<md-button class="md-primary" ng-href="#/talentDetails/{{talent.id}}">Details</md-button>
+		</md-card-actions>
+	</md-card>
+</div>

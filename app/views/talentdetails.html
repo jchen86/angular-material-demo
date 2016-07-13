@@ -1,0 +1,74 @@
+<div layout="column" ng-cloak>
+
+  <div layout="row" class="md-button-group">
+    <md-button class="md-raised" flex-grow="auto" ng-href="/#/talents">
+      <md-icon md-svg-icon="images/icons/back-arrow.svg"></md-icon>
+      <span style="padding-left:5px;" hide-xs>Back</span>
+    </md-button>
+    <md-button class="md-raised" flex-grow="auto" ng-click="talentDetails.showTopPick($event)">
+      <md-icon md-svg-icon="images/icons/favorite.svg"></md-icon>
+      <span style="padding-left:5px;" hide-xs>Top-pick</span>
+    </md-button>
+    <md-button class="md-raised" flex-grow="auto" ng-click="talentDetails.showInterested($event)">
+      <md-icon md-svg-icon="images/icons/comment.svg"></md-icon>
+      <span style="padding-left:5px;" hide-xs>Interested</span>
+    </md-button>
+  </div>
+
+  <div class="md-whiteframe-4dp">
+    <div layout="row" layout-xs="column" style="margin-bottom: 10px">
+      <div hide-xs class="md-padding">
+        <img ng-src="{{talentDetails.talent.image}}" style="width:200px; height:auto;">
+      </div>
+      <div layout="column" class="md-padding">
+        <h2>{{talentDetails.talent.name}}</h2>
+				<span>
+					<b>Years of Experience: </b>9 years<br/>
+					<b>Education Level: </b>Masters
+				</span>
+        <br/>
+				<span>
+					<md-icon md-svg-icon="images/icons/location.svg"></md-icon> {{talentDetails.talent.location}}
+				</span>
+				<span>
+					<md-icon md-svg-icon="images/icons/people.svg"></md-icon> {{talentDetails.talent.industry}}
+				</span>
+      </div>
+    </div>
+
+    <div class="md-padding">
+      <p>{{talentDetails.talent.summary}}</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id dictum augue, ut finibus nisl. Praesent
+        vitae malesuada nibh, sit amet imperdiet est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+        posuere cubilia Curae; Nam maximus tortor lacus, a euismod enim luctus sed. In rutrum nisi purus, a vulputate
+        odio eleifend nec. Nunc ac massa sit amet purus tristique fringilla nec eget nunc. Curabitur tincidunt neque sed
+        nunc mattis, ac imperdiet nulla volutpat. Pellentesque faucibus turpis sit amet ipsum semper, sit amet gravida
+        ex rutrum. Phasellus ullamcorper nisl ut turpis congue aliquam. Duis feugiat, dolor id lobortis lobortis, felis
+        sapien cursus sem, id malesuada augue leo quis dui. Aenean nec sem dolor. Curabitur vel aliquet erat. Cras at
+        dolor at mi suscipit tristique non eget turpis. Nullam ut pulvinar dolor.
+      </p>
+      <p>
+        Nulla facilisi. Praesent dignissim elit a felis auctor porta. Pellentesque suscipit maximus lacus eget
+        efficitur. Aliquam tempor interdum efficitur. Vivamus condimentum vestibulum dui nec ullamcorper. Integer in
+        mattis sapien. Cras eu purus nisi. Proin quis viverra lorem, quis volutpat sapien. Vivamus sagittis libero vitae
+        condimentum porttitor. Cras erat magna, tempus at tempor a, maximus et neque. Pellentesque vel arcu non odio
+        tempor vehicula. Fusce egestas diam vitae nisi viverra lacinia. Aenean ultrices sem a est posuere iaculis.
+        Aenean quis risus ut erat tincidunt sagittis. Nulla facilisi.
+      </p>
+      <p>
+        Praesent quis nunc egestas, congue sem in, pellentesque quam. Duis vitae risus non turpis volutpat scelerisque.
+        Nam quis aliquet sapien. Donec ut condimentum tellus. Sed at tellus eget libero varius dapibus in vel neque.
+        Maecenas feugiat, neque ultricies porta volutpat, dolor massa convallis enim, quis porta lacus mi at sapien.
+        Praesent eget tincidunt ex. Sed consequat, urna vitae tempor tempus, eros orci suscipit risus, ornare
+        consectetur turpis diam vitae dolor.
+      </p>
+      <p>
+        Donec laoreet odio id erat scelerisque, sodales ornare eros finibus. Phasellus lobortis nisi eu sollicitudin
+        vulputate. Donec dictum orci at metus semper auctor sed non mauris. Phasellus interdum et ex a faucibus. Cras
+        vitae metus volutpat, tempor turpis nec, facilisis lectus. In fringilla sem quis metus facilisis, ac pulvinar
+        eros volutpat. In facilisis posuere nibh quis eleifend.
+      </p>
+    </div>
+  </div>
+</div>

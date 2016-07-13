@@ -1,0 +1,23 @@
+<div layout="column" class="md-inline-form">
+	<md-content layout-padding>
+		<section>
+			<md-input-container class="md-block">
+				<label>Name</label>
+				<input ng-model="submitIdeaForm.data.name">
+			</md-input-container>
+			<md-input-container class="md-block">
+				<label>Position</label>
+				<input ng-model="submitIdeaForm.data.position">
+			</md-input-container>
+			<md-input-container class="md-block">
+				<label>Description</label>
+				<textarea ng-model="submitIdeaForm.data.description" md-maxlength="150" rows="5"></textarea>
+			</md-input-container>
+
+			<div layout="row" layout-align="end">
+				<md-button class="md-primary">Add team member</md-button>
+			</div>
+		</section>
+	</md-content>
+	<md-divider></md-divider>
+</div>

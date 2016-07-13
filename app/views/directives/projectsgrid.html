@@ -1,0 +1,58 @@
+<md-content class="md-padding" layout="column" ng-cloak>
+	<md-card ng-repeat="project in projects | limitTo: limit">
+		<md-card-title>
+			<md-card-title-text>
+				<span class="md-headline">{{project.projectName}}</span>
+			</md-card-title-text>
+		</md-card-title>
+		<md-card-content>
+			<div layout="row" layout-xs="column">
+				<div flex-gt-xs="50" layout="column" class="md-padding">
+					<img ng-src="{{project.image}}" class="md-card-image" style="max-width:100%; height:auto;">
+				</div>
+				<md-content flex-xs flex-gt-xs="50" layout="column" class="md-padding">
+					<p>
+						{{project.summary}}
+					</p>
+					<div layout="row" layout-xs="column" layout-align-xs="center" class="md-padding" ng-if="showDetails" hide-xs>
+						<div layout="column" flex>
+							<div>
+								<md-icon md-svg-icon="images/icons/location.svg"></md-icon> {{project.location}}
+							</div>
+              <br>
+              <div><b>Since:</b> {{project.startDate | date : 'MMM yyyy'}}</div>
+							<div><b>Stage {{project.stage}}:</b> {{project.stage | stage}}</div>
+						</div>
+						<div layout="column" flex>
+              <div>
+								<md-icon md-svg-icon="images/icons/people.svg"></md-icon> {{project.industry}}
+							</div>
+              <br>
+              <div>
+                <b>Talent Gap:</b>
+                <ul>
+                  <li ng-repeat="talent in project.talentRequests">{{talent.type}}</li>
+                </ul>
+              </div>
+						</div>
+					</div>
+				</md-content>
+			</div>
+		</md-card-content>
+		<md-card-actions layout="row" layout-align="end center">
+			<md-button class="md-icon-button" aria-label="Favorite">
+				<md-icon md-svg-icon="images/icons/favorite.svg"></md-icon>
+				<md-tooltip md-direction="bottom">
+					Add to favourite
+				</md-tooltip>
+			</md-button>
+			<md-button class="md-icon-button" aria-label="Share">
+				<md-icon md-svg-icon="images/icons/share-arrow.svg"></md-icon>
+				<md-tooltip md-direction="bottom">
+					Share
+				</md-tooltip>
+			</md-button>
+			<md-button class="md-primary" ng-href="#/projectDetails/{{project.id}}">More Details</md-button>
+		</md-card-actions>
+	</md-card>
+</md-content>

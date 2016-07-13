@@ -1,0 +1,17 @@
+<p>{{projectDetails.project.whatsNext}}</p>
+<div layout="row" layout-xs="column">
+	<div layout="column" flex-gt-xs="70">
+		<div ng-repeat="talent in projectDetails.project.talentRequests">
+			<h4>{{talent.type}}</h4>
+			<p>{{talent.description}}</p>
+		</div>
+	</div>
+	<div layout="column" flex-gt-xs="30">
+		<h4>The Exchange</h4>
+		<ul>
+			<li ng-repeat="exchange in projectDetails.project.talentExchanges">
+				{{exchange}}
+			</li>
+		</ul>
+	</div>
+</div>

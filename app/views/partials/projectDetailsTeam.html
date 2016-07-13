@@ -1,0 +1,19 @@
+<p>
+	{{projectDetails.project.projectName}} consists of a team of {{projectDetails.project.members.length | numberToWords}}
+	who share a dream of creating lasting impact using
+	innovation and collaboration. The three brings together a wide range of talents, skills and experience from different
+	walks of life.
+</p>
+<md-divider></md-divider>
+<div layout="column">
+	<div ng-repeat="member in projectDetails.project.members">
+		<div layout="row" layout-xs="column">
+			<div style="min-width: 180px" hide-xs><img ng-src="{{member.image}}" class="md-avatar" style="width: 180px;height:auto;"/></div>
+			<div class="md-padding">
+				<h4>{{member.name}} - {{member.position}}</h4>
+				<p>{{member.description}}</p>
+			</div>
+		</div>
+		<md-divider></md-divider>
+	</div>
+</div>

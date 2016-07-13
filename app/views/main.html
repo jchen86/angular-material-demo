@@ -1,0 +1,26 @@
+<div class="jumbotron">
+	<h1 class="md-display-3 headline">Connecting Entrepreneurs with Talent</h1>
+	<div layout='row' layout-fill layout-margin layout-align='center center' class="md-subhead">
+		<div style="margin-top: 12px;">I'm an...</div>
+		<md-select ng-model="main.currentRole">
+			<md-option ng-repeat="userRole in main.userRoles" value="{{userRole}}">
+				{{userRole}}
+			</md-option>
+		</md-select>
+	</div>
+</div>
+
+<md-divider></md-divider>
+
+<section ng-show="main.currentRole === 'Talent'" layout="column" layout-align="start center">
+	<h3 class="md-title font-weight-300">Find a Business to invest your Talent</h3>
+	<jc-projects-grid item-limit="3"></jc-projects-grid>
+	<md-button class="md-raised md-primary" ng-href="/#/projects">Explore more</md-button>
+</section>
+
+<section ng-show="main.currentRole === 'Entrepreneur'" layout="column" layout-align="start center">
+	<h3 class="md-title font-weight-300">Find a Talent to advance your Talent</h3>
+	<jc-talents-grid item-limit="3" hide-details="true"></jc-talents-grid>
+	<md-button class="md-raised md-primary" ng-href="/#/talents">Explore more</md-button>
+	<md-divider></md-divider>
+</section>
