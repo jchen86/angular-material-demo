@@ -1,6 +1,6 @@
 # Project Tomato
 
-A project I created for playing & experimenting with Angular Materials. The Angular Materials layout module is awesome!
+A project I created for playing & experimenting with Angular Material. The Angular Material layout module is awesome!
 
 ## Prerequisites
 
