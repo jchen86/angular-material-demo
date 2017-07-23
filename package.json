@@ -1,5 +1,5 @@
 {
-  "name": "project-tomato",
+  "name": "angular-material-demo",
   "version": "0.0.1",
   "description": "A project I created for playing & experimenting with Angular Materials",
   "main": "Gruntfile.js",
@@ -9,12 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jchen86/angular-material-project-tomato"
+    "url": "https://github.com/jchen86/angular-material-demo"
   },
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
     "grunt": "^0.4.5",
     "grunt-angular-templates": "^0.5.7",
+    "grunt-cli": "^1.2.0",
     "grunt-concurrent": "^1.0.0",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-compass": "^1.0.0",

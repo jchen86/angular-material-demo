@@ -1,17 +1,34 @@
-# Project Tomato
+# Angular Material Demo App
 
-A project I created for playing & experimenting with Angular Material. The Angular Material layout module is awesome!
+## Screenshot
+
+### Desktop:
+
+![Screenshot - Desktop](screenshots/desktop.png)
+
+### Mobile:
+
+![Screenshot - iPhone](screenshots/iphone-1.png)
+![Screenshot - iPhone](screenshots/iphone-2.png)
 
 ## Prerequisites
 
-- node >= v4.4.5
-- bower >= 1.7.9
-- compass >= 1.0.3
+1. Node.js >= v4.4.5
+2. Bower >= 1.7.9
+3. Ruby: test with `ruby -v` in your terminal
+4. Compass >= 1.0.3: When you've confirmed you have Ruby installed, run
+`gem install compass` to install Compass
 
-## Build & development
+## Running the App
 
-Run `grunt` for building and `grunt serve` for preview.
+```bash
+$ git clone https://github.com/jchen86/angular-material-demo.git
+$ cd angular-material-demo
+$ npm install & bower install
+$ npm start
+```
+> Open browser and go to [localhost:9000](localhost:9000)
 
-## Testing
+## Running the tests
 
 Running `grunt test` will run the unit tests with karma.
